@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elisabeth Uwamahoro - Portfolio</title>
+    <style>
+        /* General Body and Layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #f4a261;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 1000px;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        /* About Section */
+        #about {
+            display: none; /* Hide by default */
+        }
+
+        .about {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .about img {
+            width: 800px;
+            height: 800px;
+            border-radius: 50%;
+        }
+
+        .about-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .about-links a {
+            color: #f4a261;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .about-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Work Section */
+        .work-cards {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .work-card {
+            background-color: #fff;
+            width: 45%;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .work-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .work-card img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 8px;
+        }
+
+        .work-card h3 {
+            margin-top: 10px;
+            color: #333;
+        }
+
+        .work-card p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            section {
+                width: 90%;
+                margin: 10px;
+            }
+
+            .work-cards {
+                flex-direction: column;
+            }
+
+            .work-card {
+                width: 100%;
+            }
+
+            .about {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const aboutLink = document.querySelector('a[href="#about"]');
+            const aboutSection = document.querySelector("#about");
+
+            aboutLink.addEventListener("click", (event) => {
+                event.preventDefault(); // Prevent the default anchor behavior
+                aboutSection.style.display = aboutSection.style.display === "none" ? "block" : "none";
+                aboutSection.scrollIntoView({ behavior: "smooth" }); // Scroll to the section
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Elisabeth Uwamahoro - UX Designer</h1>
+        <nav>
+            <ul>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- About Section -->
+    <section>
+        <h2>About Me</h2>
+        <div class="">
+            <img src="./images/my PIC 2" alt="Elisabeth Uwamahoro">
+            <div>
+                <p>Hello, I’m Elisabeth Uwamahoro, a passionate UX Designer with a focus on creating user-centered and intuitive digital experiences. Below are my contact details:</p>
+                <div class="about-links">
+                    <a href="https://www.linkedin.com/in/elisabeth-uwamahoro-79b50626b/" target="_blank">LinkedIn</a>
+                    <a href="mailto:uwamahoroelisa@gmail.com">Email</a>
+                    <a href="file:///C:/Users/Mahoro/OneDrive/My%20Resume.pdf" target="_blank">My Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Elisabeth Uwamahoro. All rights reserved.</p>
+    </footer>
+</body>
+</html>
